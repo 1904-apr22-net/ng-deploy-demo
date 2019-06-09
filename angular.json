@@ -90,6 +90,7 @@
           "configurations": {
             "ci": {
               "karmaConfig": "karma-ci.conf.js",
+              "codeCoverage": true,
               "progress": false,
               "watch": false
             }
