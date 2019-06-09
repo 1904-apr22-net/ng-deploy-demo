@@ -36,7 +36,7 @@ stages:
         cliProjectKey: '1904-ng-card'
         cliSources: 'src'
         extraProperties: |
-          sonar.typescript.lcov.reportPaths=artifacts/test/coverage/*.info
+          sonar.typescript.lcov.reportPaths=artifacts/test/coverage/lcov.info
       displayName: 'Prepare SonarCloud analysis'
 
     - script: npm run build:ci
