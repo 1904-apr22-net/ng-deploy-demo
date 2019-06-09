@@ -13,6 +13,8 @@ stages:
     pool: Default
 
     steps:
+    - checkout: self
+      clean: true
 
     - task: NodeTool@0
       inputs:
