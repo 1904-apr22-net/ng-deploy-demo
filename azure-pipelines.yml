@@ -53,14 +53,13 @@ stages:
 
     - task: PublishTestResults@2
       inputs:
-        searchFolder: artifacts/test/unit
-        testRunTitle: Unit tests
+        searchFolder: '$(System.DefaultWorkingDirectory)/artifacts/test/unit'
       displayName: 'Publish unit test results'
 
     - task: PublishCodeCoverageResults@1
       inputs:
         codeCoverageTool: Cobertura
-        summaryFileLocation: artifacts/test/coverage/cobertura-coverage.xml
+        summaryFileLocation: 'artifacts/test/coverage/cobertura-coverage.xml'
         failIfCoverageEmpty: false
       displayName: 'Publish code coverage'
 
