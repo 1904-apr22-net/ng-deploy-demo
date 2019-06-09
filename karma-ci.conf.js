@@ -6,9 +6,6 @@ module.exports = function (config) {
     plugins: config.plugins.concat([
       require('karma-junit-reporter')
     ]),
-    coverageIstanbulReporter: Object.assign({}, config.coverageIstanbulReporter, {
-      reports: ['html', 'cobertura', 'lcovonly']
-    }),
     junitReporter: {
       outputDir: 'artifacts/test/unit',
       outputFile: 'TEST-unit.xml'
