@@ -10,7 +10,7 @@ module.exports = function (config) {
       outputDir: 'artifacts/test/unit',
       outputFile: 'TEST-unit.xml'
     },
-    reporters: ['junit', 'coverage-istanbul'],
+    reporters: ['junit'],
     colors: false,
     browsers: ['ChromiumCI'],
     customLaunchers: {
