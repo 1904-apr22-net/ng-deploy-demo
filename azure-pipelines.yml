@@ -40,14 +40,14 @@ stages:
     - script: npm run build:ci
       displayName: 'Build'
 
+    - script: npm run test:ci
+      displayName: 'Run unit tests'
+
     - task: SonarCloudAnalyze@1
       displayName: 'Run SonarCloud analysis'
 
     - task: SonarCloudPublish@1
       displayName: 'Publish SonarCloud quality gate result'
-
-    - script: npm run test:ci
-      displayName: 'Run unit tests'
 
     - task: AzureRmWebAppDeployment@4
       inputs:
