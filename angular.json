@@ -86,6 +86,13 @@
               "src/styles.css"
             ],
             "scripts": []
+          },
+          "configurations": {
+            "ci": {
+              "karmaConfig": "karma-ci.conf.js",
+              "progress": false,
+              "watch": false
+            }
           }
         },
         "lint": {

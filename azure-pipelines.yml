@@ -7,10 +7,13 @@ stages:
 - stage: build
   displayName: 'Build'
   jobs:
-  - job: build
-    displayName: 'Build'
+  - job: default
+    displayName: 'Default'
+
     pool: Default
+
     steps:
+
     - task: NodeTool@0
       inputs:
         versionSpec: '10.x'
@@ -42,6 +45,9 @@ stages:
 
     - task: SonarCloudPublish@1
       displayName: 'Publish SonarCloud quality gate result'
+
+    - script: npm run test:ci
+      displayName: 'Run unit tests'
 
     - task: AzureRmWebAppDeployment@4
       inputs:
