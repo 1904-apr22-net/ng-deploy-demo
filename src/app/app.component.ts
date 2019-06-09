@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
   // styles: [
   //   ''
   // ]
-  styleUrls: ['./app.component.css']
+  // styleUrls: ['./app.component.css']
   // inputs, outputs
 })
 export class AppComponent {
