@@ -13,7 +13,7 @@ module.exports = function (config) {
       outputDir: 'artifacts/test/unit',
       outputFile: 'TEST-unit.xml'
     },
-    reporters: ['junit', 'coverage-istanbul-loader'],
+    reporters: ['junit', 'coverage-istanbul'],
     colors: false,
     browsers: ['ChromiumCI'],
     customLaunchers: {
