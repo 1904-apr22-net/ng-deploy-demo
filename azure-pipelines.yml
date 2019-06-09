@@ -51,6 +51,19 @@ stages:
     - task: SonarCloudPublish@1
       displayName: 'Publish SonarCloud quality gate result'
 
+    - task: PublishTestResults@2
+      inputs:
+        searchFolder: artifacts/test/unit
+        testRunTitle: Unit tests
+      displayName: 'Publish unit test results'
+
+    - task: PublishCodeCoverageResults@1
+      inputs:
+        codeCoverageTool: Cobertura
+        summaryFileLocation: artifacts/test/coverage/cobertura-coverage.xml
+        failIfCoverageEmpty: false
+      displayName: 'Publish code coverage'
+
     - task: AzureRmWebAppDeployment@4
       inputs:
         ConnectionType: 'AzureRM'
